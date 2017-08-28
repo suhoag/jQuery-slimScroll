@@ -233,7 +233,7 @@
 
         // optionally set height/width to the parent's height/width
         o.height = (o.height == 'auto') ? me.parent().height() : o.height;
-        o.width = (o.width == 'auto') ? me.parent().width() : o.width;
+        o.width = (o.width == 'auto' && o.axis != 'y') ? me.parent().width() : o.width;
 
         //store options in DOM
         me.data('slimScrollConfig', o);
